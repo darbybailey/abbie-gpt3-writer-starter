@@ -5,6 +5,7 @@ import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
 const [userInput, setUserInput] = useState('');
+
 const [apiOutput, setApiOutput] = useState('')
 const [isGenerating, setIsGenerating] = useState(false)
 
