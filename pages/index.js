@@ -2,61 +2,43 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
-
-//openai instructions
-
-import { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import FileSaver from 'file-saver';
 import jsPDF from 'jspdf';
 
-function Example() {
-  const [pdfData, setPdfData] = useState(null);
-
-  const handleDownload = () => {
-    const pdf = new jsPDF();
-    pdf.text('Your lesson plan:', 10, 10);
-    pdf.text(apiOutput, 10, 20);
-
-    pdf.getBlob(blob => {
-      setPdfData(blob);
-    });
-  };
-
-//endopenai
-
 const Home = () => {
-const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState('');
+  const [apiOutput, setApiOutput] = useState('')
+  const [isGenerating, setIsGenerating] = useState(false)
 
-const [apiOutput, setApiOutput] = useState('')
-const [isGenerating, setIsGenerating] = useState(false)
-
-const callGenerateEndpoint = async () => {
-  setIsGenerating(true);
+  const callGenerateEndpoint = async () => {
+    setIsGenerating(true);
   
-  console.log("Calling OpenAI...")
-  const response = await fetch('/api/generate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ userInput }),
-  });
+    console.log("Calling OpenAI...")
+    const response = await fetch('/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userInput }),
+    });
 
-  const data = await response.json();
-  const { output } = data;
+    const data = await response.json();
+    const { output } = data;
+    console.log("OpenAI replied...", output.text)
 
-  console.log("OpenAI replied...", output.text)
+    setApiOutput(`${output.text}`);
+    setIsGenerating(false);
+  }
 
-  setApiOutput(`${output.text}`);
-  setIsGenerating(false);
-}
+  const downloadPDF = () => {
+    const doc = new jsPDF();
+    doc.text(apiOutput, 10, 10);
+    doc.save('lesson-plan.pdf');
+  }
 
-
-const onUserChangedText = (event) => {
-  console.log(event.target.value);
-  setUserInput(event.target.value);
-};
+  const onUserChangedText = (event) => {
+    console.log(event.target.value);
+    setUserInput(event.target.value);
+  };
 
   return (
     <div className="root">
@@ -74,19 +56,6 @@ const onUserChangedText = (event) => {
         </div>
 	</div>
 
-//openai input
-return (
-    <div>
-      <button onClick={handleDownload}>Download PDF</button>
-      {pdfData && (
-        <a href="#" onClick={() => FileSaver.saveAs(pdfData, "worksheet.pdf")}>
-          Download
-        </a>
-      )}
-    </div>
-  );
-}
-//endopenai
 
 <div className="prompt-container">
   <textarea
