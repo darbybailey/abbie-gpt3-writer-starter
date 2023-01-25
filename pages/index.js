@@ -23,6 +23,13 @@ const callGenerateEndpoint = async () => {
 
   const data = await response.json();
   const { output } = data;
+//OPENAI INSTRUCTIONS ADDED HERE
+  import jsPDF from 'jspdf';
+  const pdf = new jsPDF();
+    pdf.text('Your lesson plan:', 10, 10);
+    pdf.text(apiOutput, 10, 20);
+    pdf.save("worksheet.pdf");
+
   console.log("OpenAI replied...", output.text)
 
   setApiOutput(`${output.text}`);
