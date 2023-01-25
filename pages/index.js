@@ -51,7 +51,7 @@ const Home = () => {
             <h1>KIRL NETWORKS</ h1>
           </div>
           <div className="header-subtitle">
-            <h2>Welcome to the classroom lesson plan idea generator. Please enter the  GRADE and NUMBER OF STUDENTS for which you want lesson plan ideas.</h2>
+            <h2>Welcome to the classroom lesson plan idea generator.  Please enter the HAPPY GRADE and NUMBER OF STUDENTS for which you want lesson plan ideas.</h2>
           </div>
         </div>
 	</div>
