@@ -78,7 +78,7 @@ const Home = () => {
 
       <div className="prompt-container">
         <textarea
-          placeholder="4th Grade, 22 students"
+          placeholder="Example input ... '4th Grade, 22 students'"
           className="prompt-box"
           value={userInput}
           onChange={onUserChangedText}

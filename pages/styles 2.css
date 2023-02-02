@@ -10,7 +10,7 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(190, 212, 196);
+    background-color: rgb(11, 57, 19);
     flex-flow: column nowrap;
     gap: 14px;
     height: 100vh;
@@ -27,9 +27,9 @@ body {
     flex-flow: column nowrap;
     gap: 10px;
     height: fit-content;
-    max-width: 375px;
+    max-width: 975px;
     overflow: auto;
-    padding: 20px;
+    padding: 50px;
     position: relative;
     width: auto;
     gap: 64px;
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: #461b60
+    color: #F6DFF3
 }
 
 .header-title {
@@ -50,8 +50,8 @@ body {
 
 .header-title h1 {
     width: 100%;
-    font-weight: 600;
-    font-size: 64px;
+    font-weight: 700;
+    font-size: 72px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -63,7 +63,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
-    color: #666;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .prompt-container {
@@ -80,14 +80,14 @@ body {
 
 .prompt-box {
     border-bottom-width: 1px;
-    border-color: #666;
+    border-color: rgba(255, 255, 255, 0.1);
     border-left-width: 1px;
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
     place-content: flex-start;
     align-items: flex-start;
-    background-color: #fff;
+    background-color: rgba(238, 198, 237, 0.05);
     border-radius: 16px;
     display: flex;
     flex: 0 0 auto;
@@ -108,7 +108,7 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color: #bca1cc;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     text-transform: none;
 }
@@ -148,7 +148,7 @@ textarea {
 }
 
 .key-stroke p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.75);
     flex: 0 0 auto;
     height: auto;
     position: relative;
@@ -166,13 +166,13 @@ textarea {
 }
 
 .or p {
-    color: #666
+    color: rgba(255, 255, 255, 0.25)
 }
 
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(227, 159, 111);
+    background-color: rgb(255, 79, 18);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -198,7 +198,7 @@ textarea {
 }
 
 .generate p {
-    color: #666;
+    color: rgb(255, 255, 255);
     margin: 0;
 }
 
@@ -209,7 +209,7 @@ textarea {
 
 .badge-container {
     display: flex;
-    bottom: 60px;
+    bottom: 20px;
     flex: 0 0 auto;
     height: auto;
     left: 20px;
@@ -227,13 +227,14 @@ textarea {
     border-top-width: 1px;
     background-color: rgb(0, 0, 0);
     border-radius: 54.3478% / 238.095%;
+    filter: grayscale(1);
     transform: none;
     transform-origin: 50% 50% 0px;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 1em;
-    color: #666;
+    color: #fff;
     padding: 12px;
     text-decoration: none;
 }
@@ -244,8 +245,8 @@ textarea {
 }
 
 .badge img {
-    width: 40px;
-    height: 40px;
+    width: 21px;
+    height: 17px;
     image-rendering: pixelated;
     flex-shrink: 0;
     fill: black;
@@ -303,7 +304,7 @@ textarea {
     letter-spacing: 0px;
     line-height: 1.4em;
     text-align: start;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     text-transform: none;
     margin: 0;
@@ -317,39 +318,12 @@ textarea {
     justify-content: flex-start;
     flex-shrink: 0;
     transform: none;
-    
 }
 
 .output-content p {
     text-align: center;
     white-space: pre-line;
-    color: #666;
-}
-
-.download-btn{
-    background: rgb(255, 79, 18);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.print-btn{
-    background: white;
-    color: rgb(255, 79, 18);
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-container{
-    display: flex;
-    gap: 20px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
@@ -420,11 +394,11 @@ textarea {
 
  /* Loading ring animation */
 .loader {
-    width: 26px;
-    height: 26px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: inline-block;
-    border-top: 2px solid #666;
+    border-top: 2px solid #FFF;
     border-right: 2px solid transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
