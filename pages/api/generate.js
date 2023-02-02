@@ -25,6 +25,7 @@ Include a description of the group and classroom activites for each timeslot.
 Create this in a bulleted and tabbed outline format appropriate for printing.
 
 At the bottom of the output, include this exact text: "These lesson plans are based on think-pair-share, research backed, learning pedagogy."
+
 `
 ;
 const generateAction = async (req, res) => {
