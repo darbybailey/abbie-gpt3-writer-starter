@@ -46,7 +46,7 @@ const onUserChangedText = (event) => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>ABBIE</ h1>
+            <h1>ABBIE - lesson plan generator</ h1>
           </div>
           <div className="header-subtitle">
             <h2>Welcome to the classroom lesson plan idea generator. Please enter the  GRADE and NUMBER OF STUDENTS for which you want lesson plan ideas.</h2>
