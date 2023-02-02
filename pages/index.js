@@ -78,7 +78,7 @@ const Home = () => {
 
       <div className="prompt-container">
         <textarea
-          placeholder="Example input ... '4th Grade, 22 students'"
+          placeholder="Example input ... 4th Grade, 22 students"
           className="prompt-box"
           value={userInput}
           onChange={onUserChangedText}
@@ -91,7 +91,7 @@ const Home = () => {
 
         <div className="header-subtitle">
           <h2>
-            Please wait 10-30 seconds for our magic helpers to do their work.
+            Please wait 30-60 seconds for our magic helpers to do their work.
           </h2>
         </div>
 
