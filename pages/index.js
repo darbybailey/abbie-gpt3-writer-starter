@@ -68,7 +68,7 @@ const Home = () => {
           </div>
           <div className="header-subtitle">
             <h2>
-              Welcome to the ABBIE automated lesson plan generator. Please enter
+              Welcome to ABBIE, the automated lesson plan generator. Please enter
               the GRADE and NUMBER OF STUDENTS for which you want lesson plan
               ideas.
             </h2>
